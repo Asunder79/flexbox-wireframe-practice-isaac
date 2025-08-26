@@ -1,0 +1,26 @@
+@import url(./reset.css);
+/*My CSS below*/
+.container{
+    display: flex; /* Make the container a flex container */
+    flex-direction: row; /* Stack items vertically */
+    min-height: 100vh; /* Ensure container takes full viewport height */
+    background-color:blueviolet;
+}
+
+#header{
+color:red;
+}
+#main-content{
+color:blue;
+}
+#article{
+color:green;
+background-color:aqua;
+}
+
+#aside{
+color:orange;
+}
+#footer{
+color:purple;
+}
