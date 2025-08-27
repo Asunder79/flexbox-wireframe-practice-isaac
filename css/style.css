@@ -1,26 +1,85 @@
 @import url(./reset.css);
 /*My CSS below*/
-.container{
-    display: flex; /* Make the container a flex container */
-    flex-direction: row; /* Stack items vertically */
-    min-height: 100vh; /* Ensure container takes full viewport height */
-    background-color:blueviolet;
+.container {
+  display: flex; /* Make the container a flex container */
+  flex-direction: column; /* Stack items vertically */
+  min-height: 50vh; /* Ensure container takes full viewport height */
+  align-items: center;
+  font-size: 2vw;
 }
 
-#header{
-color:red;
+.header-box {
+  padding: 20px;
+  /* color:rgb(125, 35, 199); */
+  border: 10px rgb(125, 35, 199);
+  background-color: rgb(125, 35, 199);
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  border-radius: 10px;
+  width: 100vw;
+  flex: 1;
+  height: max-content;
+  max-height: 3vw;
 }
-#main-content{
-color:blue;
+.main-content {
+    display:flex;
+    flex-direction: column;
+  background-color: aquamarine;
+  /* padding: 20px; */
+  border-radius: 10px;
+  width: 100vw;
+  flex: 1;
+  height: max-content;
+  max-height: 80vw;
 }
-#article{
-color:green;
-background-color:aqua;
+.article-box {
+  background-color: crimson;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  border-radius: 10px;
+  width: 100vw;
+  flex: 1;
+  height: max-content;
+  max-height: 100vw;
 }
 
-#aside{
-color:orange;
+.aside-box {
+  background-color: cadetblue;
+  padding: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  width: 100vw;
+  border-radius: 10px;
+  flex: 1;
+  height: max-content;
+  max-height: 3vw;
 }
-#footer{
-color:purple;
+.footer-box {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: orange;
+  width: 100vw;
+  border-radius: 10px;
+  flex: 1;
+  height: max-content;
+  max-height: 3vw;
+}
+.article {
+  text-align: center;
+  font-size: large;
+}
+.footer {
+  text-align: center;
+  font-size: large;
+}
+.header {
+  text-align: center;
+  font-size: large;
+}
+.aside {
+  text-align: center;
+  font-size: large;
 }
