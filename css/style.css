@@ -1,11 +1,25 @@
 @import url(./reset.css);
 /*My CSS below*/
+main{
+   flex: 3; /* Gives main a larger proportion of the space */
+}
+aside{
+  flex:1;
+}
 .container {
   display: flex; /* Make the container a flex container */
   flex-direction: column; /* Stack items vertically */
   min-height: 50vh; /* Ensure container takes full viewport height */
   align-items: center;
   font-size: 2vw;
+  flex-grow:1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap:wrap;
+  }
 }
 
 .header-box {
@@ -21,6 +35,7 @@
   flex: 1;
   height: max-content;
   max-height: 3vw;
+  flex: 0 0 100%;
 }
 .main-content {
     display:flex;
@@ -37,9 +52,8 @@
   background-color: crimson;
   margin-bottom: 10px;
   margin-top: 10px;
-
   border-radius: 10px;
-  width: 100vw;
+  width: 60vw;
   flex: 1;
   height: max-content;
   max-height: 100vw;
@@ -50,22 +64,24 @@
   padding: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
-
-  width: 100vw;
+  width: 80vw;
   border-radius: 10px;
   flex: 1;
   height: max-content;
   max-height: 3vw;
+  justify-content:center;
+  align-items:center;
 }
 .footer-box {
   margin-top: 10px;
   padding: 20px;
   background-color: orange;
-  width: 100vw;
+  width: 80vw;
   border-radius: 10px;
   flex: 1;
   height: max-content;
-  max-height: 3vw;
+  max-height: 3vh;
+  flex: 0 0 100%;
 }
 .article {
   text-align: center;
