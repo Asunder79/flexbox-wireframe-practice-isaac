@@ -1,87 +1,80 @@
 @import url(./reset.css);
 /*My CSS below*/
-main{
+/* main{
    flex: 3; /* Gives main a larger proportion of the space */
-}
-aside{
+
+/* aside{
   flex:1;
-}
+} */ 
 .container {
-  display: flex; /* Make the container a flex container */
-  flex-direction: column; /* Stack items vertically */
-  min-height: 50vh; /* Ensure container takes full viewport height */
-  align-items: center;
-  font-size: 2vw;
-  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
 }
 
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    flex-wrap:wrap;
-  }
+
+.main-content-wrapper {
+  display: flex;
+  flex-direction: column; /* Stacks main and aside on smaller screens */
+  flex-grow: 1; /* Allows this wrapper to fill the available space */
 }
 
-.header-box {
-  padding: 20px;
-  /* color:rgb(125, 35, 199); */
-  border: 10px rgb(125, 35, 199);
-  background-color: rgb(125, 35, 199);
-  margin-bottom: 10px;
-  margin-top: 10px;
-
-  border-radius: 10px;
-  width: 100vw;
-  flex: 1;
-  height: max-content;
-  max-height: 3vw;
-  flex: 0 0 100%;
-}
-.main-content {
-    display:flex;
-    flex-direction: column;
-  background-color: aquamarine;
-  /* padding: 20px; */
-  border-radius: 10px;
-  width: 100vw;
-  flex: 1;
-  height: max-content;
-  max-height: 80vw;
-}
+/* Common Box Styling */
+.header-box,
+.main-content,
+.aside-box,
+.footer-box,
 .article-box {
-  background-color: crimson;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  border-radius: 10px;
-  width: 60vw;
-  flex: 1;
-  height: max-content;
-  max-height: 100vw;
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 5px;
 }
 
-.aside-box {
-  background-color: cadetblue;
-  padding: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  width: 80vw;
-  border-radius: 10px;
-  flex: 1;
-  height: max-content;
-  max-height: 3vw;
-  justify-content:center;
-  align-items:center;
+.header-box{
+  background-color:darkorchid;
+  border-radius:10px;
 }
-.footer-box {
-  margin-top: 10px;
-  padding: 20px;
+
+.footer-box{
   background-color: orange;
-  width: 80vw;
-  border-radius: 10px;
-  flex: 1;
-  height: max-content;
-  max-height: 3vh;
-  flex: 0 0 100%;
+  border-radius:10px;
+}
+
+.article-box{
+  background-color:red;
+  border-radius:10px;
+}
+
+.aside-box{
+  background-color:cadetblue;
+  border-radius:10px;
+}
+
+.main-content{
+  background-color:aqua;
+  border-radius:10px;
+}
+
+.header-box,
+.footer-box {
+  flex-shrink: 0; /* Prevents the header and footer from shrinking */
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+  .main-content-wrapper {
+    flex-direction: row; /* Arranges main content and aside side-by-side */
+    flex-wrap: wrap; /* Allows the content to wrap if the screen gets too narrow */
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+
+  .aside-box {
+    flex: 0 0 300px;
+  }
 }
 .article {
   text-align: center;
