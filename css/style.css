@@ -1,25 +1,17 @@
 @import url(./reset.css);
-/*My CSS below*/
-/* main{
-   flex: 3; /* Gives main a larger proportion of the space */
 
-/* aside{
-  flex:1;
-} */ 
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the container takes up at least the full viewport height */
+  min-height: 100vh; 
 }
-
 
 .main-content-wrapper {
   display: flex;
-  flex-direction: column; /* Stacks main and aside on smaller screens */
-  flex-grow: 1; /* Allows this wrapper to fill the available space */
+  flex-direction: column; 
+  flex-grow: 1; 
 }
 
-/* Common Box Styling */
 .header-box,
 .main-content,
 .aside-box,
